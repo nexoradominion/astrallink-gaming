@@ -138,6 +138,18 @@
         </div>
 
     </div>
+<script>
+function loginUser() {
+    const username = document.querySelector('input[type="text"]').value.trim();
+    const password = document.querySelector('input[type="password"]').value.trim();
 
+    if (username === "" || password === "") {
+        alert("Please enter username and password");
+        return;
+    }
+
+    window.location.href = "products.html";
+}
+</script>
 </body>
   </html>
