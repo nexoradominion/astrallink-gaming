@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AstralLink - Payment</title>
+
+<style>
+*{box-sizing:border-box}
+
+body{
+    margin:0;
+    background:#0b0908;
+    color:white;
+    font-family:Arial,sans-serif;
+}
+
+.header{
+    padding:25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid #3d332b;
+}
+
+.logo{
+    color:#f6bd4f;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.back{
+    color:#f6bd4f;
+    text-decoration:none;
+    font-size:17px;
+}
+
+.container{
+    padding:25px;
+    max-width:500px;
+    margin:auto;
+}
+
+.title{
+    text-align:center;
+    margin:20px 0 25px;
+}
+
+.title h1{
+    color:#f6bd4f;
+    font-size:30px;
+}
+
+.title p{
+    color:#999;
+}
+
+.package{
+    background:#211c19;
+    border:1px solid #51412d;
+    border-radius:28px;
+    padding:25px;
+    margin-bottom:25px;
+    text-align:center;
+}
+
+.package-name{
+    font-size:25px;
+    font-weight:bold;
+}
+
+.package-days{
+    color:#999;
+    margin:10px 0;
+}
+
+.package-return{
+    color:#f6bd4f;
+    font-size:23px;
+    font-weight:bold;
+}
+
+.qr-card{
+    background:#211c19;
+    border:1px solid #51412d;
+    border-radius:30px;
+    padding:30px 20px;
+    text-align:center;
+}
+
+.qr-card h2{
+    color:#f6bd4f;
+}
+
+.qr-image{
+    width:250px;
+    height:250px;
+    object-fit:contain;
+    background:white;
+    padding:10px;
+    border-radius:12px;
+    margin:20px auto;
+    display:block;
+}
+
+.info{
+    color:#999;
+    line-height:1.6;
+}
+
+.demo{
+    margin-top:20px;
+    padding:14px;
+    border:1px solid #46382b;
+    border-radius:15px;
+    color:#888;
+    font-size:13px;
+}
+
+.back-button{
+    display:block;
+    text-align:center;
+    margin-top:25px;
+    background:#f6bd4f;
+    color:#111;
+    padding:16px;
+    border-radius:28px;
+    text-decoration:none;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <div class="logo">◆ AstralLink</div>
+    <a href="products.html" class="back">← Back</a>
+</div>
+
+<div class="container">
+
+    <div class="title">
+        <h1>Payment</h1>
+        <p>Demo QR Code</p>
+    </div>
+
+    <div class="package">
+        <div class="package-name" id="packageName">
+            Selected Package
+        </div>
+
+        <div class="package-days">
+            7 Day Package
+        </div>
+
+        <div class="package-return" id="packageReturn">
+            Virtual Credits
+        </div>
+    </div>
+
+    <div class="qr-card">
+
+        <h2>Scan QR Code</h2>
+
+        <img src="qr-code.png"
+             class="qr-image"
+             alt="Demo QR Code">
+
+        <div class="info">
+            QR Code for demo purposes
+        </div>
+
+        <div class="demo">
+            Demo website only • Virtual Credits • No real money
+        </div>
+
+    </div>
+
+    <a href="products.html" class="back-button">
+        Back to Packages
+    </a>
+
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const packageValue = params.get("package");
+
+if(packageValue === "9000"){
+    document.getElementById("packageName").innerText =
+        "9,000 Credits";
+    document.getElementById("packageReturn").innerText =
+        "→ 27,000 Credits";
+}
+
+else if(packageValue === "18000"){
+    document.getElementById("packageName").innerText =
+        "18,000 Credits";
+    document.getElementById("packageReturn").innerText =
+        "→ 72,000 Credits";
+}
+
+else if(packageValue === "30000"){
+    document.getElementById("packageName").innerText =
+        "30,000 Credits";
+    document.getElementById("packageReturn").innerText =
+        "→ 150,000 Credits";
+}
+</script>
+
+</body>
+  </html>
