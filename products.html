@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AstralLink - Packages</title>
+
+<style>
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  background:#0b0908;
+  color:white;
+  font-family:Arial,sans-serif;
+  padding-bottom:80px;
+}
+
+.header{
+  padding:18px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  color:#f5bd55;
+  font-size:25px;
+  font-weight:bold;
+}
+
+.balance{
+  border:1px solid #604a2c;
+  border-radius:18px;
+  padding:12px 16px;
+  color:#f5bd55;
+}
+
+.hero{
+  margin:10px 16px 20px;
+  padding:25px 20px;
+  border:1px solid #634b2c;
+  border-radius:22px;
+  background:linear-gradient(135deg,#211914,#0e0c0b);
+}
+
+.hero h1{
+  margin:0;
+  font-size:32px;
+}
+
+.hero p{
+  color:#aaa;
+  font-size:16px;
+}
+
+.tabs{
+  display:flex;
+  gap:10px;
+  overflow-x:auto;
+  padding:0 16px 18px;
+}
+
+.tab{
+  white-space:nowrap;
+  padding:12px 22px;
+  border-radius:25px;
+  background:#292522;
+  color:#ddd;
+}
+
+.tab.active{
+  background:#f4bd59;
+  color:#111;
+}
+
+.card{
+  margin:14px 16px;
+  padding:14px;
+  border:1px solid #44362b;
+  border-radius:22px;
+  background:#211c19;
+  display:flex;
+  gap:15px;
+  align-items:center;
+}
+
+.gpu{
+  width:115px;
+  height:95px;
+  border-radius:15px;
+  background:#111;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:45px;
+}
+
+.info{
+  flex:1;
+}
+
+.info h2{
+  margin:0 0 8px;
+  font-size:20px;
+}
+
+.info p{
+  margin:5px 0;
+  color:#aaa;
+}
+
+.profit{
+  color:#f5bd55 !important;
+}
+
+.price{
+  color:#f5bd55;
+  font-size:25px;
+  font-weight:bold;
+  margin:8px 0;
+}
+
+.buy{
+  background:#f5bd55;
+  color:#111;
+  border:0;
+  border-radius:15px;
+  padding:12px 18px;
+  font-weight:bold;
+  font-size:15px;
+}
+
+.bottom{
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  height:72px;
+  background:#171311;
+  border-top:1px solid #44362b;
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+}
+
+.nav{
+  text-align:center;
+  color:#aaa;
+  font-size:13px;
+}
+
+.nav.active{
+  color:#f5bd55;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+  <div class="logo">◆ AstralLink</div>
+  <div class="balance">💰 ₹0.00</div>
+</div>
+
+<div class="hero">
+  <h1>Invest in Powerful GPUs</h1>
+  <p>Demo Gaming Platform • Virtual Credits Only</p>
+</div>
+
+<div class="tabs">
+  <div class="tab active">All</div>
+  <div class="tab">DGX</div>
+  <div class="tab">NVIDIA</div>
+  <div class="tab">RTX</div>
+  <div class="tab">Gaming</div>
+</div>
+
+<div class="card">
+  <div class="gpu">🖥️</div>
+  <div class="info">
+    <h2>DGX Station</h2>
+    <p>7 Day Package</p>
+    <p class="profit">Daily Virtual Profit: 15 Credits</p>
+    <div class="price">300 Credits</div>
+    <button class="buy" onclick="buyPackage('DGX Station',300)">
+      Buy Now
+    </button>
+  </div>
+</div>
+
+<div class="card">
+  <div class="gpu">🎮</div>
+  <div class="info">
+    <h2>NVIDIA A100</h2>
+    <p>7 Day Package</p>
+    <p class="profit">Daily Virtual Profit: 26.60 Credits</p>
+    <div class="price">700 Credits</div>
+    <button class="buy" onclick="buyPackage('NVIDIA A100',700)">
+      Buy Now
+    </button>
+  </div>
+</div>
+
+<div class="card">
+  <div class="gpu">⚡</div>
+  <div class="info">
+    <h2>NVIDIA RTX 3070</h2>
+    <p>7 Day Package</p>
+    <p class="profit">Daily Virtual Profit: 45 Credits</p>
+    <div class="price">1,200 Credits</div>
+    <button class="buy" onclick="buyPackage('RTX 3070',1200)">
+      Buy Now
+    </button>
+  </div>
+</div>
+
+<div class="card">
+  <div class="gpu">🔥</div>
+  <div class="info">
+    <h2>RTX 4090</h2>
+    <p>7 Day Package</p>
+    <p class="profit">Daily Virtual Profit: 90 Credits</p>
+    <div class="price">2,500 Credits</div>
+    <button class="buy" onclick="buyPackage('RTX 4090',2500)">
+      Buy Now
+    </button>
+  </div>
+</div>
+
+<div class="bottom">
+  <div class="nav active">⌂<br>Home</div>
+  <div class="nav">▥<br>Orders</div>
+  <div class="nav">▢<br>Wallet</div>
+  <div class="nav">♙<br>Account</div>
+</div>
+
+<script>
+function buyPackage(name,price){
+  alert(
+    name + " selected!\\n\\n" +
+    "Price: " + price + " Virtual Credits\\n" +
+    "This is a demo platform. No real-money transaction."
+  );
+}
+</script>
+
+</body>
+                                 </html>
