@@ -6,154 +6,144 @@
 <title>AstralLink - Packages</title>
 
 <style>
-*{
-  box-sizing:border-box;
-}
+*{box-sizing:border-box}
 
 body{
-  margin:0;
-  background:#0b0908;
-  color:white;
-  font-family:Arial,sans-serif;
-  padding-bottom:80px;
+    margin:0;
+    background:#0b0908;
+    color:white;
+    font-family:Arial,sans-serif;
+    padding-bottom:90px;
 }
 
 .header{
-  padding:18px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:28px;
 }
 
 .logo{
-  color:#f5bd55;
-  font-size:25px;
-  font-weight:bold;
+    color:#f6bd4f;
+    font-size:30px;
+    font-weight:bold;
 }
 
 .balance{
-  border:1px solid #604a2c;
-  border-radius:18px;
-  padding:12px 16px;
-  color:#f5bd55;
+    border:1px solid #6b5229;
+    border-radius:30px;
+    padding:14px 20px;
+    color:#f6bd4f;
 }
 
 .hero{
-  margin:10px 16px 20px;
-  padding:25px 20px;
-  border:1px solid #634b2c;
-  border-radius:22px;
-  background:linear-gradient(135deg,#211914,#0e0c0b);
+    margin:20px 28px;
+    padding:45px 36px;
+    border:1px solid #604a27;
+    border-radius:38px;
+    background:#15110f;
 }
 
 .hero h1{
-  margin:0;
-  font-size:32px;
+    font-size:42px;
+    margin:0 0 22px;
 }
 
 .hero p{
-  color:#aaa;
-  font-size:16px;
+    color:#aaa;
+    font-size:19px;
 }
 
-.tabs{
-  display:flex;
-  gap:10px;
-  overflow-x:auto;
-  padding:0 16px 18px;
+.categories{
+    display:flex;
+    gap:15px;
+    overflow-x:auto;
+    padding:10px 28px 25px;
 }
 
-.tab{
-  white-space:nowrap;
-  padding:12px 22px;
-  border-radius:25px;
-  background:#292522;
-  color:#ddd;
+.category{
+    flex:0 0 auto;
+    background:#292725;
+    color:#ddd;
+    padding:16px 32px;
+    border-radius:35px;
+    font-size:19px;
 }
 
-.tab.active{
-  background:#f4bd59;
-  color:#111;
+.category.active{
+    background:#f6bd4f;
+    color:#111;
 }
 
 .card{
-  margin:14px 16px;
-  padding:14px;
-  border:1px solid #44362b;
-  border-radius:22px;
-  background:#211c19;
-  display:flex;
-  gap:15px;
-  align-items:center;
+    margin:15px 28px;
+    padding:28px 25px;
+    border:1px solid #46382b;
+    border-radius:32px;
+    background:#211c19;
 }
 
-.gpu{
-  width:115px;
-  height:95px;
-  border-radius:15px;
-  background:#111;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:45px;
+.card h2{
+    margin:0 0 10px;
+    font-size:28px;
 }
 
-.info{
-  flex:1;
+.days{
+    color:#aaa;
+    font-size:19px;
+    margin-bottom:15px;
 }
 
-.info h2{
-  margin:0 0 8px;
-  font-size:20px;
-}
-
-.info p{
-  margin:5px 0;
-  color:#aaa;
-}
-
-.profit{
-  color:#f5bd55 !important;
-}
-
-.price{
-  color:#f5bd55;
-  font-size:25px;
-  font-weight:bold;
-  margin:8px 0;
+.package{
+    color:#f6bd4f;
+    font-size:23px;
+    font-weight:bold;
+    line-height:1.4;
+    margin-bottom:20px;
 }
 
 .buy{
-  background:#f5bd55;
-  color:#111;
-  border:0;
-  border-radius:15px;
-  padding:12px 18px;
-  font-weight:bold;
-  font-size:15px;
+    background:#f6bd4f;
+    border:0;
+    border-radius:28px;
+    padding:16px 32px;
+    font-size:19px;
+    font-weight:bold;
+}
+
+.note{
+    text-align:center;
+    color:#777;
+    font-size:13px;
+    margin:25px;
 }
 
 .bottom{
-  position:fixed;
-  bottom:0;
-  left:0;
-  right:0;
-  height:72px;
-  background:#171311;
-  border-top:1px solid #44362b;
-  display:flex;
-  justify-content:space-around;
-  align-items:center;
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    height:90px;
+    background:#171310;
+    border-top:1px solid #3d332b;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
 }
 
 .nav{
-  text-align:center;
-  color:#aaa;
-  font-size:13px;
+    color:#aaa;
+    text-align:center;
 }
 
 .nav.active{
-  color:#f5bd55;
+    color:#f6bd4f;
+}
+
+.nav-icon{
+    display:block;
+    font-size:22px;
+    margin-bottom:6px;
 }
 </style>
 </head>
@@ -161,91 +151,63 @@ body{
 <body>
 
 <div class="header">
-  <div class="logo">◆ AstralLink</div>
-  <div class="balance">💰 ₹0.00</div>
+    <div class="logo">◆ AstralLink</div>
+    <div class="balance">💰 0 Credits</div>
 </div>
 
 <div class="hero">
-  <h1>Invest in Powerful GPUs</h1>
-  <p>Demo Gaming Platform • Virtual Credits Only</p>
+    <h1>Invest in Powerful<br>GPUs</h1>
+    <p>Demo Gaming Platform • Virtual Credits Only</p>
 </div>
 
-<div class="tabs">
-  <div class="tab active">All</div>
-  <div class="tab">DGX</div>
-  <div class="tab">NVIDIA</div>
-  <div class="tab">RTX</div>
-  <div class="tab">Gaming</div>
-</div>
-
-<div class="card">
-  <div class="gpu">🖥️</div>
-  <div class="info">
-    <h2>DGX Station</h2>
-    <p>7 Day Package</p>
-    <p class="profit">Daily Virtual Profit: 15 Credits</p>
-    <div class="price">300 Credits</div>
-    <button class="buy" onclick="buyPackage('DGX Station',300)">
-      Buy Now
-    </button>
-  </div>
+<div class="categories">
+    <div class="category active">All</div>
+    <div class="category">9K</div>
+    <div class="category">18K</div>
+    <div class="category">30K</div>
 </div>
 
 <div class="card">
-  <div class="gpu">🎮</div>
-  <div class="info">
+    <h2>DGX Starter</h2>
+    <div class="days">7 Day Package</div>
+    <div class="package">9,000 Credits → 27,000 Credits</div>
+    <button class="buy" onclick="demoBuy('9,000 Credits')">Buy Now</button>
+</div>
+
+<div class="card">
     <h2>NVIDIA A100</h2>
-    <p>7 Day Package</p>
-    <p class="profit">Daily Virtual Profit: 26.60 Credits</p>
-    <div class="price">700 Credits</div>
-    <button class="buy" onclick="buyPackage('NVIDIA A100',700)">
-      Buy Now
-    </button>
-  </div>
+    <div class="days">7 Day Package</div>
+    <div class="package">18,000 Credits → 72,000 Credits</div>
+    <button class="buy" onclick="demoBuy('18,000 Credits')">Buy Now</button>
 </div>
 
 <div class="card">
-  <div class="gpu">⚡</div>
-  <div class="info">
-    <h2>NVIDIA RTX 3070</h2>
-    <p>7 Day Package</p>
-    <p class="profit">Daily Virtual Profit: 45 Credits</p>
-    <div class="price">1,200 Credits</div>
-    <button class="buy" onclick="buyPackage('RTX 3070',1200)">
-      Buy Now
-    </button>
-  </div>
+    <h2>RTX 4090 Ultimate</h2>
+    <div class="days">7 Day Package</div>
+    <div class="package">30,000 Credits → 150,000 Credits</div>
+    <button class="buy" onclick="demoBuy('30,000 Credits')">Buy Now</button>
 </div>
 
-<div class="card">
-  <div class="gpu">🔥</div>
-  <div class="info">
-    <h2>RTX 4090</h2>
-    <p>7 Day Package</p>
-    <p class="profit">Daily Virtual Profit: 90 Credits</p>
-    <div class="price">2,500 Credits</div>
-    <button class="buy" onclick="buyPackage('RTX 4090',2500)">
-      Buy Now
-    </button>
-  </div>
+<div class="note">
+    Demo website only • No real money • Virtual Credits only
 </div>
 
 <div class="bottom">
-  <div class="nav active">⌂<br>Home</div>
-  <div class="nav">▥<br>Orders</div>
-  <div class="nav">▢<br>Wallet</div>
-  <div class="nav">♙<br>Account</div>
+    <div class="nav active"><span class="nav-icon">⌂</span>Home</div>
+    <div class="nav"><span class="nav-icon">▥</span>Orders</div>
+    <div class="nav"><span class="nav-icon">□</span>Wallet</div>
+    <div class="nav"><span class="nav-icon">♙</span>Account</div>
 </div>
 
 <script>
-function buyPackage(name,price){
-  alert(
-    name + " selected!\\n\\n" +
-    "Price: " + price + " Virtual Credits\\n" +
-    "This is a demo platform. No real-money transaction."
-  );
+function demoBuy(packageName){
+    alert(
+        "Demo Purchase\n\n" +
+        packageName +
+        "\n\nVirtual Credits only.\nNo real money is involved."
+    );
 }
 </script>
 
 </body>
-                                 </html>
+  </html>
